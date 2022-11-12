@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="Lista"> 
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur </li>
+    </ol>
+    <script >
+        var elemento = document.createElement("li");
+        var contenido = document.createTextNode("contenido");
+
+        elemento.appendChild(contenido);
+        //El siguiente codigo agrega un elemento al final del documento.
+        //document.body.appendChild(elemento);
+
+
+        //El siguiente codigo obtiene un elemento padre al cual podremos agregar un nodo.
+        //var padre = document.getElementById("Lista");
+        var padre = document.getElementsByTagName("li")[1].parentNode;
+        var hijo = document.getElementsByTagName("li")[0];
+        padre.insertBefore(elemento,hijo);
+    </script>
+</body>
+</html>

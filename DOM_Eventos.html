@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+<body>
+    <button id="boton">Boton</button>
+    <input type="text" id="input">
+    <script>
+        (function(){
+
+            /*
+            function Hola() {
+                alert("PINSHE LOCO");
+            }
+            var btn = document.getElementById("boton");
+            btn.addEventListener("click",Hola)
+            */
+
+            function focus(e) {
+                console.log("Este evento es de tipo "+ e.type);
+                console.log("f o c u s");
+            }
+
+            var input = document.getElementById("input");
+            input.addEventListener("focus",focus);
+
+            /*
+            El siguiente codigo elimina el evento y la funcio a ejecutar.
+            input.removeEventListener("focus",focus);
+            */
+        }())
+
+        //EVENTOS DEL DOM
+        //https://www.w3schools.com/jsref/dom_obj_event.asp
+
+    </script>
+</body>
+</html>

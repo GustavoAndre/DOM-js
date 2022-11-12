@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="Lista"> 
+        <li id="primero">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur </li>
+    </ol>
+    <script >
+        var elemento = document.createElement("li");
+        var contenido = document.createTextNode("contenido");
+        elemento.appendChild(contenido);
+
+        var primerElemento = document.getElementById("primero");
+        //primerElemento.innerHTML = "Hola <b>pendejo<b/>";
+        //primerElemento.textContent = "pinshe <i>loco</i>";
+        
+        var padre = document.getElementById("Lista");
+        var hijo = document.getElementsByTagName("li")[1];
+        
+        //El sigueinte codigo reemplaza el DOM 'hijo' por el nuevo elemento 'elemento'.
+        //padre.replaceChild(elemento,hijo);
+
+
+        //El siguiente codigo remueve o elimina del documento el DOM 'hijo',
+        //el cual tiene el indice 1.
+        //padre.removeChild(hijo);
+    </script>
+</body>
+</html>

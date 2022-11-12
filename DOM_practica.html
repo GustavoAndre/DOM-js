@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MODIFICANDO ESTILOS DE LOS ELEMENTOS</title>
+    <style>
+        .thumb{
+            width: 200px;
+            transition: 300ms all ease;
+        }
+        .grande{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" >
+        <input type="button" value="Cambio de tamaño" onclick="zoom();">
+        
+    </form>
+    <img id="thumb" class="thumb" src="img01.jpg" alt="" width="200" >
+
+    <script>
+        function zoom(){
+            var thumb = document.getElementById("thumb");
+            
+            if(thumb.className == "thumb")
+            {
+                thumb.className = "thumb grande";
+            }
+            else
+            {
+                thumb.className = "thumb";
+            }
+        }
+    </script>
+</body>
+</html>

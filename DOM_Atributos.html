@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #dddddd;
+            display: inline-block;
+            margin-right: 10px;
+            border:1px solid #aaaaaa;
+        }
+        .azul{
+            background: #0074d9;
+            border: 1px solid #000;
+        }
+        .rojo{
+            background: #FF4136;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <secction id="contenedor">
+        <div class=""></div>
+        <div class=""></div>
+    </secction>
+    <script>
+        var div = document.createElement("div");
+        div.setAttribute("class","azul");
+        var contenedor = document.getElementById("contenedor");
+        var hijo = document.getElementsByTagName("div")[0];
+        hijo.setAttribute("class","rojo");
+        contenedor.insertBefore(div,hijo);
+    </script>
+</body>
+</html>

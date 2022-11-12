@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORM</title>
+</head>
+<body>
+    <form action="" name="formulario" method="get">
+        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="nombre">
+        <br>
+        <input type="radio" name="sexo" id="hombre" value="hombre">hombre
+        <input type="radio" name="sexo" id="mujer" value="mujer">mujer
+        <br>
+        <input type="checkbox" name="termino" id="terminos">TERMINOSO Y CONDICIONES
+        <br>
+        <input type="submit" id="btn" name="btn" value="enviar">
+    </form>
+    <script>
+        (function(){
+            var frm = document.getElementsByName("formulario")[0];
+
+            function validarNombre(e) {
+                if(frm.nombre.value == ""){
+                    alert("EL CAMPO NOMBRE ESTA VACIO");
+                    e.preventDefault();
+                }
+            }
+
+            function validarRadio(e) {
+                if (frm.sexo[0].checked == false && frm.sexo[1].checked == false) {
+                    alert("SELECIONE SEXO");
+                    e.preventDefault();
+                }
+                else{
+                    
+                }
+            }
+
+            function validarChkb(e) {
+                if (frm.terminos.checked !== true) {
+                    alert("Acepte los terminos y condiciones");
+                    e.preventDefault();
+                }
+                
+            }
+
+            function validar(e) {
+                validarNombre(e);
+                validarRadio(e);
+                validarChkb(e);
+            }
+
+            frm.addEventListener("submit",validar);
+        }())
+    </script>
+</body>
+</html>
